@@ -1,0 +1,42 @@
+import random
+Lives = 3
+x=""
+
+def twos(twos):
+    if len(twos)!=8:
+        print("Invalid length")
+
+    for i in twos:
+            if int(i) > 1:
+                print("invalid value")
+
+    if twos[0]=="1":
+        twos = int(twos, 2)
+        decimal = 256 - twos
+        final_num = -decimal
+        return(final_num)
+
+    else:
+        number = int(twos,2)
+        return(number)
+
+for i in range(8):
+    x+=str(random.randint(0,1))
+    print(x)
+
+print(twos(x))
+
+Running = True
+
+while Running:
+    number = (twos(x))
+    guess = int(input("Can you guess my number?"))
+    if guess > number:
+        print("Go lower!")
+        print("You lost a life btw lol")
+    if guess < number:
+        print("Go Higher!")
+        print("You lost a life btw lol")
+    if guess == number:
+        print("Wow you did it!")
+        Running = False
