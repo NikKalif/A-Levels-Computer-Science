@@ -1,0 +1,6 @@
+current_time = (int(input("Current time:")))
+time_until_alarm = (int(input("How long do you wanna wait?")))
+
+timepassed = (((current_time + 12) + time_until_alarm) % 24)
+
+print("It will ring at", timepassed -12, "PM")
