@@ -1,6 +1,16 @@
 current_time = (int(input("Current time:")))
 time_until_alarm = (int(input("How long do you wanna wait?")))
+num=(time_until_alarm % 24)
 
-timepassed = (((current_time + 12) + time_until_alarm) % 24)
+x = (current_time + num)
+if x > 12:
+    daynight = "PM"
+if x < 12:
+    daynight = "AM"
 
-print("It will ring at", timepassed -12, "PM")
+print("It will ring at", x, daynight)
+
+
+
+# num=51%24
+# print(2+num)
