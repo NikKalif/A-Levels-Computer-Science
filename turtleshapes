@@ -40,3 +40,14 @@ for i in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
     heading =(heading + i)
 
 print(heading)
+
+-- STAR --
+
+import turtle
+import random
+wn = turtle.Screen()
+gay = turtle.Turtle()
+
+for i in range(6):
+    gay.forward(50)
+    gay.right(144)
