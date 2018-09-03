@@ -1,0 +1,27 @@
+import turtle
+wn = turtle.Screen()
+woo = turtle.Turtle()
+
+for i in range(3):
+    woo.forward(50)
+    woo.right(120)
+    
+-- 
+
+import turtle
+wn = turtle.Screen()
+woo = turtle.Turtle()
+
+for i in range(4):
+    woo.forward(50)
+    woo.right(90)
+    
+--
+
+import turtle
+wn = turtle.Screen()
+woo = turtle.Turtle()
+
+for i in range(8):
+    woo.forward(50)
+    woo.right(45)
