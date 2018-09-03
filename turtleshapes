@@ -25,3 +25,18 @@ woo = turtle.Turtle()
 for i in range(8):
     woo.forward(50)
     woo.right(45)
+
+-- PIRATE --
+
+import turtle
+import random
+wn = turtle.Screen()
+pirate = turtle.Turtle()
+heading = 0
+
+for i in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
+    pirate.forward(100)
+    pirate.left(i)
+    heading =(heading + i)
+
+print(heading)
