@@ -51,3 +51,38 @@ gay = turtle.Turtle()
 for i in range(6):
     gay.forward(50)
     gay.right(144)
+
+-- 
+
+import turtle
+wn = turtle.Screen()
+tess = turtle.Turtle()
+tess.color("Blue")
+wn.bgcolor("Lightgreen")
+
+tess.penup()
+tess.forward(80)
+tess.pendown()
+tess.forward(5)
+tess.pensize(2)
+tess.penup()
+tess.forward(25)
+tess.shape("turtle")
+tess.stamp()
+tess.backward(110)
+
+for i in range(12):
+
+    tess.left(30)
+    tess.penup()
+    tess.forward(80)
+    tess.pendown()
+    tess.forward(5)
+    tess.pensize(2)
+    tess.penup()
+    tess.forward(25)
+    tess.shape("turtle")
+    tess.stamp()
+    tess.backward(110)
+
+wn.mainloop()
