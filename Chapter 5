@@ -53,4 +53,74 @@ else:
 
 2)
 
+startday = int(input("Starting Day?"))
+length = int(input("How long are you staying?"))
+remainder = (length%7)
+endday = str(remainder + startday)
+
+if endday == "0":
+    print("Sunday")
+elif endday == "1":
+    print("Monday")
+elif endday == "2":
+    print("Tuesday")
+elif endday == "3":
+    print("Wednesday")
+elif endday == "4":
+    print("Thursday")
+elif endday == "5":
+    print("Friday")
+else:
+    print("Saturday")
+    
+- 
+
+3) 
+
+a <= b
+a < b
+a < 18 and day != 3
+a < 18 and day == 3
+
+4) 
+
+3 equals 3
+3 Does not equal 3
+3 is more than or equal to 4
+---
+
+5) 
+
+T
+T
+T
+T
+T
+T
+F
+T
+
+6)
+
+mark = int(input("Raw mark?"))
+
+if mark >= 75:
+    print("First")
+elif mark >70 or mark <75:
+    print("Upper Second")
+elif mark >60 or mark <70:
+    print("Second")
+elif mark >50 or mark <60:
+    print("Third")
+elif mark >45 or mark <50:
+    print("F1 Supp")
+elif mark >40 or mark <45:
+    print("F2")
+else: 
+    print("F3")
+
+7)
+
+
+
 
