@@ -251,3 +251,18 @@ for v in xs:
     draw_bar(tess, v)
 
 wn.mainloop()
+
+10) 
+
+def find_hypot(x, y):
+    hypot2 = ((x**2) + (y**2))
+    finalhypot = (hypot2**0.5)
+    print(int(finalhypot))
+
+opposite = int(input("Length of opposite?"))
+adjacent = int(input("Length of adjacent?"))
+find_hypot(opposite, adjacent)
+
+11)
+
+--
