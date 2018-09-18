@@ -204,19 +204,15 @@ tess.pensize(3)
 
 xs = [-48, 117, 200, 240, 160, 260, 220, -10]
 
-def draw_bar(t, height):
-    if(height >=200):
-        t.color("blue")
-    elif(height <200 and height >100):
-        t.color("yellow")
-    elif(height <100):
-        t.color("green")
-    elif(height <0):
-        negative_draw(tess, v)
+def negative_draw(t, height):
     t.begin_fill()
     t.left(90)
     t.forward(height)
+    t.penup()
+    t.backward(20)
     t.write(" "+ str(height))
+    t.forward(20)
+    t.pendown()
     t.right(90)
     t.forward(40)
     t.right(90)
@@ -227,19 +223,24 @@ def draw_bar(t, height):
     t.forward(10)
     t.pendown()
 
-def negative_draw(t, height):
-    t.left(90)
-    t.forward(20)
-    t.write(" "+ str(height - height*2))
-    t.backward(20)
-    t.right(90)
+def draw_bar(t, height):
+    if(height >=200):
+        t.color("blue")
+    elif(height <200 and height >100):
+        t.color("yellow")
+    elif(height <100 and height >=0):
+        t.color("green")
+    elif(height <0):
+        negative_draw(tess, v)
+        return
     t.begin_fill()
     t.left(90)
-    t.forward(height - height*2)
+    t.forward(height)
+    t.write(" "+ str(height))
     t.right(90)
     t.forward(40)
     t.right(90)
-    t.forward(height - height*2)
+    t.forward(height)
     t.left(90)
     t.penup()
     t.end_fill()
