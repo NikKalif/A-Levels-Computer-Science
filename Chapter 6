@@ -66,3 +66,61 @@ day_num(Day)
 
 4)
 
+current_day = str(input("What day is it today?"))
+abccunt = int(input("How many days awyyyyyyyyyyyyyyy"))
+
+def day_num(x, y):
+
+    if x == "Sunday":
+        daynum = 0
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    elif x == "Monday":
+        daynum = 1
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    elif x == "Tuesday":
+        daynum = 2
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    elif x == "Wednesday":
+        daynum = 3
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    elif x == "Thursday":
+        daynum = 4
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    elif x == "Friday":
+        daynum = 5
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    elif x == "Saturday":
+        daynum = 6
+        noweekdays = y % 7
+        dayback = daynum + noweekdays
+        if dayback > 7:
+            peepee = dayback - 7
+            return peepee
+    else:
+        print("ERROR")
+
+print(day_num(current_day, abccunt))
