@@ -110,3 +110,95 @@ def day_num(x, y):
     print("Sunday") 
 
 day_num("Monday", 26)
+
+5) 
+
+def day_num(x, y):
+
+  if x == "Sunday":
+    x = 0
+  elif x == "Monday":
+    x = 1 
+  elif x == "Tuesday":
+    x = 2
+  elif x == "Wednesday":
+    x = 3 
+  elif x== "Thursday":
+    x = 4
+  elif x== "Friday":
+    x = 5 
+  elif x== "Saturday":
+    x = 6
+  
+  if y < 0:
+    finaladjust = y - 2*y
+    finalday = x + (finaladjust % 7)
+
+  else: 
+    finalday = x + (y % 7)
+
+  if finalday == 0:
+    print("Sunday")
+  
+  elif finalday == 1:
+    print("Monday")
+
+  elif finalday == 2:
+    print("Tuesday")
+  
+  elif finalday == 3:
+    print("Wednesday")
+  
+  elif finalday == 4:
+    print("Thursday")
+  
+  elif finalday == 5:
+    print("Friday")
+  
+  elif finalday == 6:
+    print("Saturday")
+  
+  elif finalday == 7:
+    print("Sunday") 
+
+day_num("Monday", -14)
+
+
+6)
+
+def days_in_month(month):
+    if month == "January" or month == "March" or month == "July" or month == "October" or month == "May" or month == "August":
+        print(31)
+    elif month == "February" or month == "April" or month == "June" or month == "November" or month == "September" or month == "December":
+        print(30)
+    else:
+        print("Error")
+
+
+monthh = input(str("Month?"))
+days_in_month(monthh)
+
+7)
+
+def to_secs(hour, minute, seconds):
+    hoursinmin = hour*3600
+    minuteinsec = minute*60
+    finalseconds = seconds + minuteinsec + hoursinmin 
+    
+    print(finalseconds, "seconds")
+
+to_secs(2, 30, 10)
+
+8) 
+
+def to_secs(hour, minute, seconds):
+    hoursinmin = hour*3600
+    minuteinsec = minute*60
+    finalseconds = seconds + minuteinsec + hoursinmin 
+    
+    print(int(finalseconds), "seconds")
+
+to_secs(2.5, 0, 10.71)
+
+9)
+
