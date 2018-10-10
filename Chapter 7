@@ -1,0 +1,29 @@
+1)
+
+numbers = ([1, 2, 3, 4, 5])
+odd = 0
+even = 0
+
+for n in numbers:
+    if n%2==0:
+        even+=1
+    if n%2==1:
+        odd+=1
+
+print("There are", odd, "odd numbers")
+print("There are", even, "even numbers")
+
+
+2)
+
+numbers = ([1, 2, 3, 4, 5])
+even = 0
+
+for n in numbers:
+    if n%2==0:
+        even = even + n
+    else:
+        print("Odd number detected")
+
+print(even)
+
