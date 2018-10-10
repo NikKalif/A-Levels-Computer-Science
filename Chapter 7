@@ -27,3 +27,31 @@ for n in numbers:
 
 print(even)
 
+3)
+
+numbers = ([1, 2, 3, 4, -1, -2, -3, -4, -5])
+count = 0
+waste = 0
+for n in numbers:
+    if n<0:
+        count = count + 1
+    if n>=0:
+        waste = waste + 1
+
+print(count)
+
+4)
+
+numbers = (["yeet", "yote", "yeehaw", "yipee", "yeeet"])
+count = 0
+waste = 0
+for n in numbers:
+    if len(n)==5:
+        count+=1
+    else:
+        waste+=1
+
+print(count)
+
+5) 
+
