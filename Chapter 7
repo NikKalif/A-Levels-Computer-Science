@@ -149,3 +149,17 @@ for(length, angle) in data:
     tess.right(angle)
 
 14)
+
+All can be drawn without lifting the pen. It's just a matter of finding the right measurements. Only issue would be the 2nd last one needing very specific measurements
+
+15)
+
+count = 0
+def num_even_digits(number):
+    for len(number) in number:
+        total = number/(10*len(number))
+
+num_even_digits(123456)
+print(count)
+
+NOT COMPLETE - GOT STUCK - NOT COMPLETE
