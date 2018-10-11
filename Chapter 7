@@ -119,3 +119,33 @@ is_prime(17)
 
 12)
 
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+tess = turtle.Turtle()
+tess.shape("turtle")
+tess.color("blue")
+
+data = [(160,20), (-43,10), (270,8), (-43,12)]
+
+for(length, angle) in data:
+    tess.forward(length)
+    tess.left(angle)
+
+13)
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+tess = turtle.Turtle()
+tess.shape("turtle")
+tess.color("blue")
+tess.speed(3)
+
+data = [(100, 90), (100, 90), (100, 90), (100, 90), (0, -60), (100,120), (100,60)]
+
+for(length, angle) in data:
+    tess.forward(length)
+    tess.right(angle)
+
+14)
