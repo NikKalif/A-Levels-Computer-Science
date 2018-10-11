@@ -55,3 +55,67 @@ print(count)
 
 5) 
 
+numbers = ([1, 3, 5, 7, 9, 10])
+count = 0
+sum = 0
+for n in numbers:
+    if n%2 == 1:
+        sum += n
+    elif n%2 == 0:
+        break
+
+print(sum)
+
+6)
+
+numbers = (["yeet", "hello", "woo", "sam"])
+count = 0
+sum = 0
+for n in numbers:
+    if n == "sam":
+        break
+    else:
+        count += 1
+
+print(count)
+
+7) 
+
+-- I don't understand the question
+
+8)
+
+The function defined contains the numbers from 1 to 7. It repeats the print_multiples function and what that does is it takes i which is 1-7 and then it multiplies the numbers given by 1-7. It also has the end command which makes it have a space in between each multiplication table. 
+
+9)
+
+def print_triangular_numbers(n):
+    start = 0
+    total = 0
+    if start < n:
+        for i in range(n):
+            start += 1
+            total += start 
+            print(start, total)
+        
+print_triangular_numbers(5)
+
+10) 
+
+def is_prime(n):
+    if n > 1:
+        for i in range(2,n):
+            if (n%i) == 0:
+                print(num, "is not a prime number") 
+                break
+        else:
+            print(n,"is a prime number") 
+            
+is_prime(17)
+
+11)
+
+---
+
+12)
+
