@@ -154,12 +154,27 @@ All can be drawn without lifting the pen. It's just a matter of finding the righ
 
 15)
 
-count = 0
-def num_even_digits(number):
-    for len(number) in number:
-        total = number/(10*len(number))
+def num_even_digits(n):
+    n=str(n)
+    count = 0
+    for i in n:
+        if int(i)%2 == 0:
+            count += 1
+        else:
+            count += 0
+    print(count)
 
-num_even_digits(123456)
-print(count)
+num_even_digits(123444)
 
-NOT COMPLETE - GOT STUCK - NOT COMPLETE
+16)
+
+def sum_of_squares(xs):
+    total = 0
+    for i in xs:
+        total += i**2
+    print(total)
+
+sum_of_squares([1, 2, 3, 4, 5])
+
+17)
+
