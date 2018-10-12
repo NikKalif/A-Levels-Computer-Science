@@ -1,0 +1,37 @@
+  1)
+  
+  "y"
+  "g"
+  9
+  3
+  True
+  False
+  False
+  
+  2)
+  
+prefixes = "JKLMNOPQ"
+suffix = "ack"
+
+print(prefixes[0] + suffix)
+print(prefixes[1] + suffix)
+print(prefixes[2] + suffix)
+print(prefixes[3] + suffix)
+print(prefixes[4] + suffix)
+print(prefixes[5] + "u" + suffix)
+print(prefixes[6] + suffix)
+print(prefixes[7] + "u" + suffix)
+
+3)
+
+def count_letters(letter):
+    count = 0
+    for l in letter:
+        if l == "a":
+            count += 1
+    return count
+
+print(count_letters("bananaannanananaanna"))
+
+4)
+
