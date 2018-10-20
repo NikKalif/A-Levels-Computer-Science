@@ -35,3 +35,30 @@ print(count_letters("bananaannanananaanna"))
 
 4)
 
+--
+
+5)
+
+punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+
+words = "Hello there, I am Hamaji Neo."
+
+def count_letters(paragraph):
+    count = 0
+    ecount = 0
+    wordcount = 0
+    nopunctutation = ""
+    for l in paragraph:
+        if l not in punctuation:
+            nopunctutation += l
+    splitparagraph = nopunctutation.split()
+    for i in splitparagraph:
+        wordcount += 1
+        if 'e' in i:
+            ecount += 1
+    print("Your text contains", wordcount, "words, of which", ecount, "(", (ecount/wordcount), "%)", "contain an 'e'.")
+    
+count_letters(words)
+
+6)
+
