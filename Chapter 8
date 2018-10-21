@@ -60,5 +60,43 @@ def count_letters(paragraph):
     
 count_letters(words)
 
-6)
+6) ONLY ISSUE IS FORMATTING, I NEED HELP FOR THAT.
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+print("     1    2    3    4    5    6    7    8    9    10    11   12")
+print("  :---------------------------------------------------------------")
+for i in numbers:
+    print(i,":", "", i*1, "  ", i*2, "  ", i*3, "  ", i*4, "  ", i*5, "  ", i*6, "  ", i*7, "  ", i*8, "  ", i*9, "  ", i*10, "  ", i*11, "  ", i*12, "  ")
+
+7)
+
+def reverse(word):
+    for i in reversed(word):
+        print(i)
+
+reverse("apple")
+
+8)
+
+def reverse(word):
+    for i in reversed(word):
+        print(i)
+    for i in word:
+        print(i)
+reverse("apple")
+
+9)
+
+def removeletter(word, ch):
+    count = 0 
+    for i in word:
+        if i == ch:
+            print("")
+        else:
+            print(i)
+
+removeletter("apple", "a")
+
+10)
 
