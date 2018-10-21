@@ -94,9 +94,19 @@ def removeletter(word, ch):
         if i == ch:
             print("")
         else:
-            print(i)
+            print(i, end ="")
 
 removeletter("apple", "a")
 
 10)
+
+def reverse(word):
+    for i in reversed(word):
+        print(i, end ="")
+    for i in word:
+        print(i, end="")
+
+reverse("apple")
+
+11)
 
