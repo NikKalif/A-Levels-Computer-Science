@@ -77,7 +77,7 @@ def reverse(word):
 
 reverse("apple")
 
-8)
+8) (This worked, but next time I'll use [::-1]
 
 def reverse(word):
     for i in reversed(word):
@@ -110,3 +110,11 @@ reverse("apple")
 
 11)
 
+def palcheck(word):
+    reverseword = word[::-1]
+    if reverseword == word:
+        print("Yes")
+    else:
+        print("Nope")
+
+palcheck("lol")
