@@ -1,0 +1,19 @@
+1) 
+
+yeet = ("hello", 12)
+
+def function(name, age):
+    print(age)
+    print(name)
+
+function(yeet)
+
+Doesn't work, it requires 2 pieces of data separately. Tuples don't work as an argument with functions.
+
+2)
+
+A pair would be a generalization of a tuple as tuples can have more than 2 pieces of data.
+
+3)
+
+A pair is a kind of tuple, Tuples can have more than two pieces of data. 
