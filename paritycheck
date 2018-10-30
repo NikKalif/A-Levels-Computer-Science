@@ -1,0 +1,16 @@
+byte = ["10101010", "00001101"]
+
+def paritycheck(byte):
+    count = 0
+    for  in byte:
+        for bit in byte:
+                if bit == 1:
+                    count += 1
+            else:
+                count += 0
+    if count%2 == 0:
+        print("Data is Valid")
+    else:
+        print("Data is not valid")
+
+paritycheck(parity)
