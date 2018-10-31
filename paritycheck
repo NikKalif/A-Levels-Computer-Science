@@ -1,16 +1,18 @@
-byte = ["10101010", "00001101"]
+bytee = ["10101010", "00001101"]
 
 def paritycheck(byte):
     count = 0
-    for  in byte:
-        for bit in byte:
-                if bit == 1:
-                    count += 1
+    for i in byte:
+        for a in i:
+            print(a)
+            if a == "1":
+                count += 1
             else:
-                count += 0
-    if count%2 == 0:
-        print("Data is Valid")
-    else:
-        print("Data is not valid")
+                continue
+        if count%2 == 0:
+            print("The Parity Byte is 0")
+        else:
+            print("The Parity Byte is 1")
+        count = 0
 
-paritycheck(parity)
+paritycheck(bytee)
