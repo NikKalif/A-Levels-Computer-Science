@@ -411,3 +411,160 @@ traffic_lights()
 
 wn.listen()                      # Listen for events
 wn.mainloop()
+
+5) 
+
+import turtle           # Tess becomes a traffic light.
+
+turtle.setup(400,500)
+wn = turtle.Screen()
+wn.title("Tess becomes a traffic light!")
+wn.bgcolor("lightgreen")
+tess = turtle.Turtle()
+
+red = turtle.Turtle()
+green = turtle.Turtle()
+yellow = turtle.Turtle()
+
+
+def draw_housing():
+    """ Draw a nice housing to hold the traffic lights """
+    tess.pensize(3)
+    tess.color("black", "darkgrey")
+    tess.begin_fill()
+    tess.forward(80)
+    tess.left(90)
+    tess.forward(200)
+    tess.circle(40, 180)
+    tess.forward(200)
+    tess.left(90)
+    tess.end_fill()
+
+draw_housing()
+
+tess.penup()
+# Position tess onto the place where the green light should be
+tess.forward(40)
+tess.left(90)
+tess.forward(50)
+# Turn tess into a big green circle
+tess.shape("circle")
+tess.shapesize(3)
+tess.fillcolor("green")
+tess.hideturtle()
+
+state_num = 0
+
+def traffic_lights():
+    global state_num
+    red.hideturtle()
+    red.forward(40)
+    red.left(90)
+    red.forward(150)
+    red.shape("circle")
+    red.shapesize(3)
+    red.fillcolor("red")
+    green.hideturtle()
+    green.forward(40)
+    green.left(90)
+    green.forward(50)
+    green.shape("circle")
+    green.shapesize(3)
+    green.fillcolor("green")
+    yellow.hideturtle()
+    yellow.forward(40)
+    yellow.left(90)
+    yellow.forward(100)
+    yellow.shape("circle")
+    yellow.shapesize(3)
+    yellow.fillcolor("yellow")
+    green.hideturtle()
+
+def orangegreen():
+    green.showturtle()
+    yellow.showturtle()
+    red.hideturtle()
+
+def greenshow():
+    red.hideturtle()
+    yellow.hideturtle()
+    green.showturtle()
+
+def yellowshow():
+    yellow.showturtle()
+    green.hideturtle()
+    red.hideturtle()
+
+def redshow():
+    red.showturtle()
+    green.hideturtle()
+    yellow.hideturtle()
+
+wn.onkey(redshow, "r")
+
+wn.onkey(yellowshow, "y")
+
+wn.onkey(greenshow, "g")
+
+wn.onkey(orangegreen, "x")
+
+#
+# def advance_state_machine():
+#     global state_num
+#     if state_num == 0:       # Transition from state 0 to state 1
+#         tess.forward(70)
+#         tess.fillcolor("orange")
+#         state_num = 1
+#     elif state_num == 1:     # Transition from state 1 to state 2
+#         tess.forward(70)
+#         tess.fillcolor("red")
+#         state_num = 2
+#     else:                    # Transition from state 2 to state 0
+#         tess.back(140)
+#         tess.fillcolor("green")
+#         state_num = 0
+#     wn.ontimer(advance_state_machine, 1000)
+
+# Bind the event handler to the space key.
+
+traffic_lights()
+
+
+wn.listen()                      # Listen for events
+wn.mainloop()
+
+6)
+
+
+PlayerA = 0
+PlayerB = 0
+
+def PlayerAWinControl():
+    PlayerAWin(PlayerA)
+
+def PlayerAWin(a):
+    if a == 0:
+        a += 15
+        print(a, ",", PlayerB)
+    elif a == 30:
+        a += 10
+        print(a, ",", PlayerB)
+    elif a == 40:
+        a == "Match Point"
+        print(a, ",", PlayerB)
+    else:
+        a = 0
+        print("Player A wins!")
+        print(a, ",", PlayerB)
+
+from tkinter import * #imports everything from the tkinter library
+
+def confirm(event=None): #set event to None to take the key argument from .bind
+    print('Function successfully called!') #this will output in the shell
+
+master = Tk() #creates our window
+
+option1 = Button(master, text = 'Press Return', command = confirm)
+option1.pack() #the past 2 lines define our button and make it visible
+
+master.bind('<Return>', confirm) #binds 'return' to the confirm function
