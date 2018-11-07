@@ -1,0 +1,25 @@
+1) 
+
+[10, 8, 6, 4, 2]
+
+2)
+
+--
+
+3)
+
+BEFORE 
+
+a = [1,2,3]
+b = [1,2,3]
+
+AFTER
+
+a = [1,2,3]
+b = [5,2,3]
+
+4)
+
+Test 1: False
+Test 2: True 
+This is because even though the value is the same, it isn't directly linked at the time. 
