@@ -23,3 +23,39 @@ b = [5,2,3]
 Test 1: False
 Test 2: True 
 This is because even though the value is the same, it isn't directly linked at the time. 
+
+5)
+
+def add_vectors(u, v):
+    u[0] = u[0] + v[0]
+    u[1] = u[1] + v[1]
+    print(u)
+
+add_vectors([1,1], [2,3])
+
+6)
+
+def scalar_mult(s, v):
+    v[0] = v[0]*s
+    v[1] = v[1]*s
+    v[2] = v[2]*s
+    print(v)
+
+scalar_mult(5, [1,2,3])
+
+7)
+
+def dot_product(u, v):
+    v = u[0] + u[1]
+    print(v)
+    
+dot_product([3,66], 0)
+
+8)
+
+9) 
+
+-- Not Sure -- 
+
+10) 
+
