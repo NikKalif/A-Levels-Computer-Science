@@ -59,3 +59,13 @@ dot_product([3,66], 0)
 
 10) 
 
+def replace(s, old, new):
+    wds = s.split(old)
+    final = new.join(wds)
+    print(final)
+
+replace("I love spom! Spom is my favorite food. Spom, spom, yum!", "om", "am")
+
+11)
+
+--
