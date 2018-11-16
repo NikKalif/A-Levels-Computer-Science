@@ -1,0 +1,19 @@
+1)
+
+b)
+
+import calendar
+help(calendar)
+cal = calendar.TextCalendar()
+cal.setfirstweekday(3)
+cal.pryear(2012)
+
+c)
+
+import calendar
+help(calendar)
+cal = calendar.TextCalendar()
+cal.prmonth(2012, 10)
+
+d)
+
