@@ -15,5 +15,21 @@ help(calendar)
 cal = calendar.TextCalendar()
 cal.prmonth(2012, 10)
 
-d)
+e) asks for a true or false, dictates if it's a leap year or not.
 
+2) 
+
+a) alot.
+
+b) prints out the highest possible no. (in integer form) for a floating point argument.
+
+eg: 
+
+import math
+
+a = math.floor(9/2)
+print(a)
+
+>> 4
+
+c) NUMBER**0.5
