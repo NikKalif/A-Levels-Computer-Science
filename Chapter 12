@@ -36,3 +36,28 @@ c) NUMBER**0.5
 
 3)
 
+A shallow copy constructs a new compound object and then (to the extent possible) inserts references into it to the objects found in the original.
+A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original.
+
+4)
+
+Done
+
+5)
+
+It printed when you ran it by itself but when run while imported, it didn't work. 
+
+6) 
+
+Done
+
+7)
+
+Splits the words if there is a space in between them
+Prints the class of the list 
+Anytime there is an "o", s will be split.
+Anytime there is an "i", s will be split. 
+Replaces any "o" with "0"
+
+8)
+
