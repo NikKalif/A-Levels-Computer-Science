@@ -1,0 +1,15 @@
+1)
+
+newfile = open("test.txt")
+read = newfile.readlines()
+newfile.close()
+
+newlist = open("sortedlist.txt", "w")
+for i in reversed(read):
+    newlist.write(i)
+    print(i)
+
+newlist.close()
+
+2)
+
