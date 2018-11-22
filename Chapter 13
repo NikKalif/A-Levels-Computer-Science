@@ -13,3 +13,25 @@ newlist.close()
 
 2)
 
+myfile = open("snake.txt", "w")
+myfile.write("My first file written from Python\n")
+myfile.write("---------------------------------\n")
+myfile.write("snake\n")
+myfile.write("snake\n")
+myfile.close()
+
+mynewhandle = open("snake.txt", "r")
+while True:                            # Keep reading forever
+    theline = mynewhandle.readline()   # Try to read next line
+    if len(theline) == 0:              # If there are no more lines
+        break                          #     leave the loop
+
+    # Now process the line we've just read
+    elif "snake" in theline:
+        print(theline, end="")
+
+mynewhandle.close()
+
+3)
+
+--
