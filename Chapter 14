@@ -1,0 +1,21 @@
+1) 
+
+xs = ["hello", "yeet", "kalif"]
+ys = ["yeet", "hi", "saurav"]
+
+def merge(xs, ys):
+
+    result = []
+
+    for i in xs:
+        for j in ys:
+            if i == j:
+                result.append(i)
+                break
+
+    return result
+
+print(merge(xs, ys))
+
+2)
+
