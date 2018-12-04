@@ -41,3 +41,22 @@ print(merge(xs, ys))
 
 c)
 
+xs = ["hello", "yeet", "kalif"]
+ys = ["yeet", "hi", "saurav"]
+
+def merge(xs, ys):
+
+    result = []
+
+    for i in ys:
+            for j in xs:
+                if i == j:
+                    break
+            else:
+                result.append(i)
+    return result
+
+print(merge(xs, ys))
+
+d)
+
