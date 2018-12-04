@@ -162,3 +162,25 @@ print(main())
 
 4)
 
+import random
+rngg = random.Random()
+
+def yeet(x):
+    result = []
+    finalresult = []
+    primenumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+    for i in range(5):
+        count = 0
+        for j in range(6):
+            if count <= 6:
+                randomnumber = x.randrange(1, 15)
+                result.append(primenumbers[randomnumber])
+                count += 1
+                print(result)
+            elif count == 7:
+                count = 0
+                finalresult.append(result)
+                result = []
+    return finalresult
+
+print(yeet(rngg))
