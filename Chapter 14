@@ -160,27 +160,52 @@ def main():
 
 print(main())
 
-4)
+5)
+a)
 
 import random
 rngg = random.Random()
 
 def yeet(x):
     result = []
-    finalresult = []
     primenumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
-    for i in range(5):
-        count = 0
-        for j in range(6):
-            if count <= 6:
-                randomnumber = x.randrange(1, 15)
-                result.append(primenumbers[randomnumber])
-                count += 1
-                print(result)
-            elif count == 7:
-                count = 0
-                finalresult.append(result)
-                result = []
-    return finalresult
+    for i in range(6):
+        randomnumber = x.randrange(1, 15)
+        result.append(primenumbers[randomnumber])
+    return result
 
 print(yeet(rngg))
+
+b)
+
+import random
+rngg = random.Random()
+
+def yeet(x):
+    result = []
+    primenumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+    for i in range(6):
+        randomnumber = x.randrange(1, 15)
+        result.append(primenumbers[randomnumber])
+    return result
+
+print(yeet(rngg))
+
+def compare(original, new):
+    count = 0
+    listcount = 0
+    for i in range(6):
+        if new[count] == original[count]:
+            count += 1
+            listcount += 1
+        else:
+            count += 1
+            break
+    print("Number of correct picks: ", listcount)
+
+original = [1,2,3,4,5,6]
+new = [1,2,3,4,4,5]
+compare(original, new)
+
+c)
+
