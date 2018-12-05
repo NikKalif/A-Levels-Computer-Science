@@ -1,0 +1,20 @@
+Monster ID starts at zero,
+increment monster ID,
+Check Monster with monster ID,
+Check Name (List position 1) with corresponding Monster ID
+increment count by 1
+print name
+increment count by 1
+Check Origin (List position 2) 
+
+2)
+
+monster = open("monsters.txt")
+while True:
+    theline = monster.readline()
+    monsterlist = theline.split(',')
+    if len(theline) > 1:
+        print(monsterlist[1])
+    if len(theline) == 0:
+        break
+monster.close()
