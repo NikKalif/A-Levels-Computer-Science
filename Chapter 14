@@ -209,3 +209,79 @@ compare(original, new)
 
 c)
 
+import random
+rngg = random.Random()
+
+def yeet(x):
+    result = []
+    primenumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+    for i in range(6):
+        randomnumber = x.randrange(1, 15)
+        result.append(primenumbers[randomnumber])
+    return result
+
+print(yeet(rngg))
+
+def compare(original, new):
+    count = 0
+    listcount = 0
+    correctpicks = []
+    for i in range(6):
+        if new[count] == original[count]:
+            correctpicks.append(new[count])
+            count += 1
+            listcount += 1
+        else:
+            count += 1
+            break
+    print("Number of correct picks: ", listcount)
+    print(correctpicks)
+
+my_tickets = [1,2,3,4,5,6]
+new = [1,2,3,4,4,5]
+compare(my_tickets, new)
+
+d)
+
+import random
+rngg = random.Random()
+
+def yeet(x):
+    result = []
+    primenumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+    for i in range(6):
+        randomnumber = x.randrange(1, 15)
+        result.append(primenumbers[randomnumber])
+    return result
+
+print(yeet(rngg))
+
+def compare(original, new):
+    count = 0
+    listcount = 0
+    correctpicks = []
+    prime = 0
+    primecount = 0
+    primelist = [2,3,5,7,11,13,17,19,23,29,31,37,41]
+    for p in primelist:
+        if new[prime] == p[prime]:
+            prime += 1
+            primecount += 1
+        else:
+            prime += 1
+            break
+    for i in range(6):
+        if new[count] == original[count]:
+            correctpicks.append(new[count])
+            count += 1
+            listcount += 1
+        else:
+            count += 1
+            break
+    print("Number of correct picks: ", listcount)
+    print(correctpicks)
+    print("No. of prime numbers: ", primecount)
+
+my_tickets = [1,2,3,4,5,6]
+new = [1,2,3,4,4,5]
+compare(my_tickets, new)
