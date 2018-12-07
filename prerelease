@@ -43,5 +43,46 @@ def findmonster(name):
     else:
         print("Monster not found")
 
-3)
+2.1
 
+monster = open("monsters.txt")
+
+isfound = 0 #0 is false, 1 is true
+monstername = input("Name of monster?")
+while True:
+    theline = monster.readline()
+    monsterlist = theline.split(',')
+    if len(theline) > 1:
+        isfound += 0
+        if monsterlist[1] == monstername:
+            isfound += 1
+    if len(theline) == 0:
+        break
+
+if isfound == 1:
+    print("Monster Found!")
+if isfound == 0:
+    print("Monster not found!")
+
+2.2
+
+3
+
+monster = open("monsters.txt")
+
+def monstercreator(name, origin, description):
+    monstercard = []
+    monstercard.append(name)
+    monstercard.append(origin)
+    monstercard.append(description)
+    monstercard.append(input("Attack Level?"))
+    monstercard.append(input("Magical Force Level?"))
+    monstercard.append(input("Magical Defence Level"))
+    monstercard.append(input("Defence Level"))
+    monstercard.append(input("Intelligence Level"))
+    monstercard.append(input("Health Level"))
+    monstercard.append(input("Experience Level"))
+    print(monstercard)
+
+
+monstercreator(input("Name?"), input("Origin?"), input("Description"))
