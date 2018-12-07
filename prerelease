@@ -1,11 +1,8 @@
-Monster ID starts at zero,
-increment monster ID,
-Check Monster with monster ID,
-Check Name (List position 1) with corresponding Monster ID
-increment count by 1
-print name
-increment count by 1
-Check Origin (List position 2) 
+Open monsters.txt fle 
+Read every line of the text
+Split when a comma is detected 
+If the length of the line is more than 1 print the name of the monster 
+If the length of the line is less than 1, stop
 
 2)
 
