@@ -15,3 +15,33 @@ while True:
     if len(theline) == 0:
         break
 monster.close()
+
+Ex task:
+
+monster = open("monsters.txt")
+
+def findmonster(name):
+    count = 0
+    namelist = []
+    failcount = 0
+    successcount = 0
+    while True:
+        theline = monster.readline()
+        count += 1
+        monsterlist = theline.split(',')
+        if len(theline) > 1:
+            print(monsterlist[1])
+            namelist.append(monsterlist[1])
+        if len(theline) == 0:
+            break
+    print(count)
+    for i in namelist:
+        if i == name:
+            successcount += 1
+    if successcount == 1:
+        print("Monster Found")
+    else:
+        print("Monster not found")
+
+3)
+
