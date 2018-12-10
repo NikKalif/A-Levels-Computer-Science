@@ -69,20 +69,61 @@ if isfound == 0:
 3
 
 monster = open("monsters.txt")
+monstercard = []
 
 def monstercreator(name, origin, description):
-    monstercard = []
     monstercard.append(name)
     monstercard.append(origin)
     monstercard.append(description)
-    monstercard.append(input("Attack Level?"))
-    monstercard.append(input("Magical Force Level?"))
-    monstercard.append(input("Magical Defence Level"))
-    monstercard.append(input("Defence Level"))
-    monstercard.append(input("Intelligence Level"))
-    monstercard.append(input("Health Level"))
-    monstercard.append(input("Experience Level"))
-    print(monstercard)
+    
+def attacklevel(levelatk):
+    if 0 <= levelatk <= 30:
+        monstercard.append(levelatk)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
 
+def magicforcelvl(levelmagicforce):
+    if 0 <= levelmagicforce <= 30:
+        monstercard.append(levelmagicforce)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
+
+def magicdefencelvl(magicdf):
+    if 0 <= magicdf <= 30:
+        monstercard.append(magicdf)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
+
+def defencelvl(deflvl):
+    if 0 <= deflvl <= 30:
+        monstercard.append(deflvl)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
+
+def intelligencelevel(intelvl):
+    if 0 <= intelvl <= 30:
+        monstercard.append(intelvl)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
+
+def healthlevel(healthlvl):
+    if 0 <= healthlvl <= 30:
+        monstercard.append(healthlvl)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
+    
+def experience(explvl):
+    if 0 <= explvl <= 30:
+        monstercard.append(explvl)
+    else:
+        print("Your Number is too high, please input a number between 0-30")
 
 monstercreator(input("Name?"), input("Origin?"), input("Description"))
+attacklevel(int(input("Attack Level")))
+magicforcelvl(int(input("Magic Force Level?")))
+magicdefencelvl(int(input("Magic Defence Level?")))
+defencelvl(int(input("Defence Level?")))
+intelligencelevel(int(input("Intelligence Level")))
+healthlevel(int(input("Health Level")))
+experience(int(input("exp Level")))
+print("Monster Card: ", monstercard)
