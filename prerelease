@@ -127,3 +127,28 @@ intelligencelevel(int(input("Intelligence Level")))
 healthlevel(int(input("Health Level")))
 experience(int(input("exp Level")))
 print("Monster Card: ", monstercard)
+
+4)
+
+1. g
+2. 21
+3. 32
+4.
+
+p = "The Titanic" 
+q = N/A
+
+5. 
+
+a) SUBSTR(IDE, 1, 10)
+b) SUBSTR(IDE, 11, 22)
+c) ONECHAR(IDE, 1, 11, 24)
+
+6. 
+
+a) 70 + 30 / 50 = 2
+b) 136
+
+7.
+
+"The answer is: 42"
