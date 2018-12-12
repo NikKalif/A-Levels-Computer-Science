@@ -1,0 +1,14 @@
+word = input("Word?")
+vowelfind = list(word)
+print(vowelfind)
+
+def vowelfinder():
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for i in vowelfind:
+        for x in vowels:
+            if i in x:
+                count += 1
+    print(count)
+
+vowelfinder()
