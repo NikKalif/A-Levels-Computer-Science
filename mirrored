@@ -1,0 +1,11 @@
+word = input("Word?")
+wordlist = list(word)
+
+def mirror():
+    list = []
+    for i in reversed(wordlist):
+        list.append(i)
+
+    print(list)
+
+mirror()
