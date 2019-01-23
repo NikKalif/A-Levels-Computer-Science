@@ -1,0 +1,16 @@
+Array = []
+while True:
+    StudentName = input("Name of student")
+    if StudentName == "#":
+        break
+    else:
+        EmailAddress = input("Email address?")
+        stringdata = StudentName + "#" + EmailAddress
+        Array.append(stringdata)
+
+print("{0:<10}\t{1:<30}".format("Name", "Email"))
+print("")
+for i in Array:
+    temp = i.split("#")
+    print("{0:<10}\t{1:<30}".format(temp[0], temp[1]))
+    
