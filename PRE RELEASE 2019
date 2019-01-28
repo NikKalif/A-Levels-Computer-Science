@@ -20,25 +20,25 @@ for i in Array:
 
 Array = []
 while True:
-    StudentName = input("Name of student")
+    StudentName = input(("Name of student"))
     if StudentName == "#":
         break
     else:
-        EmailAddress = input("Email address?")
+        EmailAddress = input(("Email address?"))
         stringdata = StudentName + "#" + EmailAddress
         Array.append(stringdata)
 
-def search_linear(check):
-    success = 0
-    for i in Array:
-        if Array[i] > 0:
-            Array[i].remove
-        else:
-            success += 1
+print(Array)
 
 print("{0:<10}\t{1:<30}".format("Name", "Email"))
 print("")
 for i in Array:
-    temp = i.split("#")
-    print("{0:<10}\t{1:<30}".format(temp[0], temp[1]))
+    if i == "":
+        break
+    elif i == "#":
+        break
+    else:
+        temp = i.split("#")
+        print("{0:<10}\t{1:<30}".format(temp[0], temp[1]))
+
     
