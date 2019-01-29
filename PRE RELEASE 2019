@@ -103,4 +103,41 @@ for i in Array:
     if namesearch in newlist[0]:
         print(newlist[0])
 
+1.5
+
+Array = [[],[]]
+print(Array)
+while True:
+    StudentName = input(("Name of student"))
+    if StudentName == "#":
+        break
+    else:
+        EmailAddress = input(("Email address?"))
+        Array[0].append(StudentName)
+        Array[1].append(EmailAddress)
+
+print(Array)
+name = Array[0]
+email = Array[1]
+count = 0
+
+print("{0:<10}\t{1:<30}".format("Name", "Email"))
+print("")
+for i in Array:
+    if i == "":
+        break
+    elif i == "#":
+        break
+    else:
+        # temp = i.split("#")
+        while count < len(name):
+            print("{0:<10}\t{1:<30}".format(name[count], email[count]))
+            count += 1
+
+namesearch = input("Name for searching?")
+for i in Array:
+    # newlist = i.split("#")
+    if namesearch in name:
+        print("Several names were found:", name)
+
 
