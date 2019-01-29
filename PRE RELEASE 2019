@@ -72,4 +72,35 @@ for i in Array:
     if namesearch == newlist[0]:
         print(newlist[1])
 
+TASK 1.4
+
+Array = []
+while True:
+    StudentName = input(("Name of student"))
+    if StudentName == "#":
+        break
+    else:
+        EmailAddress = input(("Email address?"))
+        stringdata = StudentName + "#" + EmailAddress
+        Array.append(stringdata)
+
+print(Array)
+
+print("{0:<10}\t{1:<30}".format("Name", "Email"))
+print("")
+for i in Array:
+    if i == "":
+        break
+    elif i == "#":
+        break
+    else:
+        temp = i.split("#")
+        print("{0:<10}\t{1:<30}".format(temp[0], temp[1]))
+
+namesearch = input("Name for searching?")
+for i in Array:
+    newlist = i.split("#")
+    if namesearch in newlist[0]:
+        print(newlist[0])
+
 
