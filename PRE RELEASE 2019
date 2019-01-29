@@ -107,16 +107,18 @@ for i in Array:
 
 Array = [[],[]]
 print(Array)
-while True:
-    StudentName = input(("Name of student"))
-    if StudentName == "#":
-        break
-    else:
-        EmailAddress = input(("Email address?"))
-        Array[0].append(StudentName)
-        Array[1].append(EmailAddress)
 
-print(Array)
+def nameadd():
+    while True:
+        StudentName = input(("Name of student"))
+        if StudentName == "#":
+            break
+        else:
+            EmailAddress = input(("Email address?"))
+            Array[0].append(StudentName)
+            Array[1].append(EmailAddress)
+
+nameadd()
 name = Array[0]
 email = Array[1]
 count = 0
@@ -135,9 +137,17 @@ for i in Array:
             count += 1
 
 namesearch = input("Name for searching?")
-for i in Array:
+count = 0
+while count < len(name):
     # newlist = i.split("#")
-    if namesearch in name:
-        print("Several names were found:", name)
+    if namesearch in name[count]:
+        print("Names that matched your search:", name[count])
+        count += 1
+    else:
+        count += 1
 
+addchoice = input("Do you want to add more names? Y/N")
+if addchoice == "Y":
+    nameadd()
 
+print(Array)
