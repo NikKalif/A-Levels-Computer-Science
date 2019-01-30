@@ -1,0 +1,14 @@
+file = open("studentname.txt", "w")
+Array = []
+
+while True:
+    StudentName = input(("Name of student"))
+    if StudentName == "#":
+        break
+    else:
+        EmailAddress = input(("Email address?"))
+        stringdata = StudentName + "#" + EmailAddress
+        Array.append(stringdata)
+
+write(Array)
+file.close()
