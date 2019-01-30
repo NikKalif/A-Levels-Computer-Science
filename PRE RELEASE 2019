@@ -105,7 +105,7 @@ for i in Array:
 
 1.5
 
-Array = [[],[]]
+Array = [[],[],[],[]]
 print(Array)
 
 def nameadd():
@@ -115,26 +115,37 @@ def nameadd():
             break
         else:
             EmailAddress = input(("Email address?"))
+            StudentID = input("Student ID?")
+            DOB = input("Date of Birth")
             Array[0].append(StudentName)
             Array[1].append(EmailAddress)
+            Array[2].append(DOB)
+            Array[3].append(StudentID)
+
+
+
+def printerino():
+    count = 0
+    print("{0:<10}\t{1:<30}\t{1:<30}\t{1:<30}".format("Name", "Email", "Date of Birth", "Student ID"))
+    print("")
+    for i in Array:
+        if i == "":
+            break
+        elif i == "#":
+            break
+        else:
+            # temp = i.split("#")
+            while count < len(name):
+                print("{0:<10}\t{1:<30}\t{1:<30}\t{1:<30}".format(name[count], email[count], dateofbirth[count], studentid[count]))
+                count += 1
 
 nameadd()
 name = Array[0]
 email = Array[1]
-count = 0
+dateofbirth = Array[2]
+studentid = Array[3]
 
-print("{0:<10}\t{1:<30}".format("Name", "Email"))
-print("")
-for i in Array:
-    if i == "":
-        break
-    elif i == "#":
-        break
-    else:
-        # temp = i.split("#")
-        while count < len(name):
-            print("{0:<10}\t{1:<30}".format(name[count], email[count]))
-            count += 1
+printerino()
 
 namesearch = input("Name for searching?")
 count = 0
@@ -146,8 +157,3 @@ while count < len(name):
     else:
         count += 1
 
-addchoice = input("Do you want to add more names? Y/N")
-if addchoice == "Y":
-    nameadd()
-
-print(Array)
