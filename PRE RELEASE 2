@@ -80,3 +80,19 @@ if yesno == "Y":
 
 2.5
 
+file = open("studentname.txt", "w+")
+Array = []
+
+while True:
+    StudentName = input(("Name of student"))
+    if StudentName == "#":
+        break
+    else:
+        EmailAddress = input("Email address?")
+        HomeAddress = input("Home Address?")
+        Tutor = input("Tutor?")
+        stringdata = StudentName + "#" + EmailAddress + "#" + HomeAddress + "#" + Tutor
+        file.write(stringdata)
+        file.write("\n")
+
+file.close()
