@@ -1,3 +1,5 @@
+2.1
+
 file = open("studentname.txt", "w+")
 Array = []
 
@@ -12,3 +14,20 @@ while True:
         file.write("\n")
 
 file.close()
+
+2.2 
+
+readfile = open("studentname.txt")
+search = input("Name of student?")
+
+
+
+while True:
+    theline = readfile.readline()
+    monsterlist = theline.split('#')
+    if len(theline) > 1:
+        if monsterlist[0] == search:
+            print("Email: ", monsterlist[1])
+    if len(theline) == 0:
+        break
+readfile.close()
