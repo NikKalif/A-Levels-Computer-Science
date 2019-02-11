@@ -1,4 +1,4 @@
-file = open("studentname.txt", "w")
+file = open("studentname.txt", "w+")
 Array = []
 
 while True:
@@ -8,7 +8,7 @@ while True:
     else:
         EmailAddress = input(("Email address?"))
         stringdata = StudentName + "#" + EmailAddress
-        Array.append(stringdata)
+        file.write(stringdata)
+        file.write("\n")
 
-write(Array)
 file.close()
