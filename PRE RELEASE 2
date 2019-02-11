@@ -31,3 +31,19 @@ while True:
     if len(theline) == 0:
         break
 readfile.close()
+
+2.3 
+
+readfile = open("studentname.txt")
+search = input("Name of student?")
+
+while True:
+    theline = readfile.readline()
+    monsterlist = theline.split('#')
+    if len(theline) > 1:
+        if search in monsterlist[0]:
+            print("Email: ", monsterlist[1])
+    if len(theline) == 0:
+        break
+readfile.close()
+
