@@ -47,3 +47,33 @@ while True:
         break
 readfile.close()
 
+2.4
+
+readfile = open("studentname.txt", "r")
+search = input("Name of student?")
+
+while True:
+    theline = readfile.readline()
+    monsterlist = theline.split('#')
+    if len(theline) > 1:
+        if search in monsterlist[0]:
+            print("Email: ", monsterlist[1])
+        else:
+            print("Email not found")
+    elif len(theline) == 0:
+        break
+readfile.close()
+
+yesno = input("Do you want to add any names? Y/N")
+if yesno == "Y":
+    file = open("studentname.txt", "a")
+    while True:
+        StudentName = input(("Name of student"))
+        if StudentName == "#":
+            break
+        else:
+            EmailAddress = input(("Email address?"))
+            stringdata = StudentName + "#" + EmailAddress
+            file.write(stringdata)
+            file.write("\n")
+    file.close()
