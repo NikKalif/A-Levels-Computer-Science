@@ -96,3 +96,12 @@ while True:
         file.write("\n")
 
 file.close()
+
+2.6
+
+readfile = open("studentname.txt", "r")
+search = input("Name of student?")
+counter = 0
+
+
+readfile.close()
