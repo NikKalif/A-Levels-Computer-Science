@@ -1,0 +1,36 @@
+def initializeboard():
+    player1board = [
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0],
+                    [0,0,0,0,0,0,0,0,0,0]]
+    print("Player 1 board:")
+    for i in range(0,10):
+        print('{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}'.format(player1board[i][0],player1board[i][1],player1board[i][2],player1board[i][3],player1board[i][4],player1board[i][5],player1board[i][6],player1board[i][7],player1board[i][8],player1board[i][9]))
+    # player2board = [
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0],
+    #                 [0,0,0,0,0,0,0,0,0,0]]
+    # print("Player 2 board:")
+    # for i in range(0,10):
+    #     print(player2board[i])
+
+initializeboard()
+
+def startgame():
+    print("Game has started")
+    print("Player 1, pick which boats you want to use")
+    print(boats)
