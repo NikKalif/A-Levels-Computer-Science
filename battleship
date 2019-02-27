@@ -11,7 +11,6 @@ player1board = [['',1,2,3,4,5,6,7,8,9,10],
                 ['H',0,0,0,0,0,0,0,0,0,0],
                 ['I',0,0,0,0,0,0,0,0,0,0],
                 ['J',0,0,0,0,0,0,0,0,0,0]]
-print("Player 1 board:")
 
 publicboard = [['',1,2,3,4,5,6,7,8,9,10],
                 ['A',0,0,0,0,0,0,0,0,0,0],
@@ -24,9 +23,9 @@ publicboard = [['',1,2,3,4,5,6,7,8,9,10],
                 ['H',0,0,0,0,0,0,0,0,0,0],
                 ['I',0,0,0,0,0,0,0,0,0,0],
                 ['J',0,0,0,0,0,0,0,0,0,0]]
-print("Player 1 board:")
 
 def printboard():
+    print("Player 1 board:")
     for i in range(0,10):
         print('{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}'.format(player1board[i][0],player1board[i][1],player1board[i][2],player1board[i][3],player1board[i][4],player1board[i][5],player1board[i][6],player1board[i][7],player1board[i][8],player1board[i][9],player1board[i][10]))
 
@@ -34,31 +33,36 @@ def printpublicboard():
     for i in range(0,10):
         print('{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}'.format(publicboard[i][0],publicboard[i][1],publicboard[i][2],publicboard[i][3],publicboard[i][4],publicboard[i][5],publicboard[i][6],publicboard[i][7],publicboard[i][8],publicboard[i][9],publicboard[i][10]))
 
+printboard()
+
 #Set up boats
 for i in range(1,11):
     randomrow = randint(1,10)
-    for j in range(5):
+    for j in range(50):
         player1board[i][randomrow] = 1
 
 def guessboat():
-    Lives = 3
-    while Lives == 3:
+    Lives = 5
+    while Lives >0:
         print("Select where you want to bomb")
-        columnselect = input("Which Column?", "(1,10")
+        columnselect = int(input("Which Column?(1,10)"))
         if columnselect > 10:
             print("Invalid")
-            columnselect = input("Which Column?", "(1,10")
+            columnselect = int(input("Which Column?(1,10)"))
         elif columnselect < 1:
             print("Invalid")
-            columnselect = input("Which Column?", "(1,10")
-        rowselect = input("Which Row?","1,10")
+            columnselect = int(input("Which Column?(1,10)"))
+        rowselect = int(input("Which Row? (1,10)"))
         if player1board[rowselect][columnselect] == 1:
             print("Success!")
+            publicboard[rowselect][columnselect] = "🚢"
             printpublicboard()
         else:
             print("Fuck you!")
+            publicboard[rowselect][columnselect] = "X"
             printpublicboard()
             Lives -= 1
+            print("You now have", Lives, "lives")
 
 guessboat()
 printboard()
