@@ -1,36 +1,73 @@
-def initializeboard():
-    player1board = [
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0],
-                    [0,0,0,0,0,0,0,0,0,0]]
-    print("Player 1 board:")
+from random import randint
+
+player1board = [['',1,2,3,4,5,6,7,8,9,10],
+                ['A',0,0,0,0,0,0,0,0,0,0],
+                ['B',0,0,0,0,0,0,0,0,0,0],
+                ['C',0,0,0,0,0,0,0,0,0,0],
+                ['D',0,0,0,0,0,0,0,0,0,0],
+                ['E',0,0,0,0,0,0,0,0,0,0],
+                ['F',0,0,0,0,0,0,0,0,0,0],
+                ['G',0,0,0,0,0,0,0,0,0,0],
+                ['H',0,0,0,0,0,0,0,0,0,0],
+                ['I',0,0,0,0,0,0,0,0,0,0],
+                ['J',0,0,0,0,0,0,0,0,0,0]]
+print("Player 1 board:")
+
+publicboard = [['',1,2,3,4,5,6,7,8,9,10],
+                ['A',0,0,0,0,0,0,0,0,0,0],
+                ['B',0,0,0,0,0,0,0,0,0,0],
+                ['C',0,0,0,0,0,0,0,0,0,0],
+                ['D',0,0,0,0,0,0,0,0,0,0],
+                ['E',0,0,0,0,0,0,0,0,0,0],
+                ['F',0,0,0,0,0,0,0,0,0,0],
+                ['G',0,0,0,0,0,0,0,0,0,0],
+                ['H',0,0,0,0,0,0,0,0,0,0],
+                ['I',0,0,0,0,0,0,0,0,0,0],
+                ['J',0,0,0,0,0,0,0,0,0,0]]
+print("Player 1 board:")
+
+def printboard():
     for i in range(0,10):
-        print('{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}'.format(player1board[i][0],player1board[i][1],player1board[i][2],player1board[i][3],player1board[i][4],player1board[i][5],player1board[i][6],player1board[i][7],player1board[i][8],player1board[i][9]))
-    # player2board = [
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0],
-    #                 [0,0,0,0,0,0,0,0,0,0]]
-    # print("Player 2 board:")
-    # for i in range(0,10):
-    #     print(player2board[i])
+        print('{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}'.format(player1board[i][0],player1board[i][1],player1board[i][2],player1board[i][3],player1board[i][4],player1board[i][5],player1board[i][6],player1board[i][7],player1board[i][8],player1board[i][9],player1board[i][10]))
 
-initializeboard()
+def printpublicboard():
+    for i in range(0,10):
+        print('{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}{:<2}'.format(publicboard[i][0],publicboard[i][1],publicboard[i][2],publicboard[i][3],publicboard[i][4],publicboard[i][5],publicboard[i][6],publicboard[i][7],publicboard[i][8],publicboard[i][9],publicboard[i][10]))
 
-def startgame():
-    print("Game has started")
-    print("Player 1, pick which boats you want to use")
-    print(boats)
+#Set up boats
+for i in range(1,11):
+    randomrow = randint(1,10)
+    for j in range(5):
+        player1board[i][randomrow] = 1
+
+def guessboat():
+    Lives = 3
+    while Lives == 3:
+        print("Select where you want to bomb")
+        columnselect = input("Which Column?", "(1,10")
+        if columnselect > 10:
+            print("Invalid")
+            columnselect = input("Which Column?", "(1,10")
+        elif columnselect < 1:
+            print("Invalid")
+            columnselect = input("Which Column?", "(1,10")
+        rowselect = input("Which Row?","1,10")
+        if player1board[rowselect][columnselect] == 1:
+            print("Success!")
+            printpublicboard()
+        else:
+            print("Fuck you!")
+            printpublicboard()
+            Lives -= 1
+
+guessboat()
+printboard()
+
+
+# def startgame():
+#     print("Game has started")
+#     #Player 1 Section
+#     print("Player 1, pick which boats you want to use")
+#     print("Available Boats:")
+#     print("Carrier = 5 \nBattleship = 4 \nCruiser = 3 \nSubmarine = 3 \nDestroyer = 2 \n")
+#     print("")
