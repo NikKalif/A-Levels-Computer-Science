@@ -1,0 +1,47 @@
+Caeser --
+
+def caeserencode(word,shift):
+    newlist = []
+    for letter in word:
+        newnum = ord(letter)
+        shiftednum = newnum + shift
+        if shiftednum = 
+
+    print(newlist)
+caeserencode("dickerino",3)
+
+-- 
+
+filetoencode = open("original.txt") #opens original string  #creates file
+cipherfile = open("cipher.txt", "w")
+cipherread = open("cipher.txt", "r")
+cipherline = cipherread.readline()
+
+def encode():
+    counter = 0
+    while counter < len(cipherline):
+        filetoencode.read()
+        cipherencode = caeserencode()
+        cipherencode()
+        #textstring?
+        cipherfile.write(cipherline)
+        counter += 1
+        #add cipher line for later!
+
+def decode():
+    cipherread.read()
+    print(cipherline)
+
+def menu():
+    while True:
+        choice = input("1 For encoding and 2 for decoding")
+        if choice == 1:
+            encode()
+        else:
+            decode()
+        break
+
+
+
+
+menu()
