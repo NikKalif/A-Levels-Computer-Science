@@ -7,12 +7,18 @@ def caeserencode(word,shift):
         print(ord(letter))
         newnum = ord(letter)
         shiftednum = newnum + shift
+        while shiftednum > 122:
+            shiftednum -= 26
         newlist.append(shiftednum)
     for letter in newlist:
         newchar = chr(letter)
         finalword.append(newchar)
     print(''.join(finalword))
-caeserencode("hello",3)
+
+gaybama = input("What word would you like to encrypt: ")
+cycles = int(input("How many cycles: "))
+caeserencode(gaybama,cycles)
+
 
 
 -- 
