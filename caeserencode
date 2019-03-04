@@ -2,13 +2,18 @@ Caeser --
 
 def caeserencode(word,shift):
     newlist = []
+    finalword = []
     for letter in word:
+        print(ord(letter))
         newnum = ord(letter)
         shiftednum = newnum + shift
-        if shiftednum = 
+        newlist.append(shiftednum)
+    for letter in newlist:
+        newchar = chr(letter)
+        finalword.append(newchar)
+    print(''.join(finalword))
+caeserencode("hello",3)
 
-    print(newlist)
-caeserencode("dickerino",3)
 
 -- 
 
