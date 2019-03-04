@@ -38,8 +38,8 @@ printboard()
 #Set up boats
 for i in range(1,11):
     randomrow = randint(1,10)
-    for j in range(50):
-        player1board[i][randomrow] = 1
+    for j in range(3):
+        player1board[j][randomrow] = 1
 
 def guessboat():
     Lives = 5
@@ -58,7 +58,7 @@ def guessboat():
             publicboard[rowselect][columnselect] = "🚢"
             printpublicboard()
         else:
-            print("Fuck you!")
+            print("Oof!")
             publicboard[rowselect][columnselect] = "X"
             printpublicboard()
             Lives -= 1
@@ -66,12 +66,3 @@ def guessboat():
 
 guessboat()
 printboard()
-
-
-# def startgame():
-#     print("Game has started")
-#     #Player 1 Section
-#     print("Player 1, pick which boats you want to use")
-#     print("Available Boats:")
-#     print("Carrier = 5 \nBattleship = 4 \nCruiser = 3 \nSubmarine = 3 \nDestroyer = 2 \n")
-#     print("")
