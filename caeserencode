@@ -1,8 +1,31 @@
-Caeser --
+filetoencode = open("original.txt", "r") #opens original string  #creates fi
+encodeline = filetoencode.readline()
+cipherfile = open("cipher.txt", "w")
+cipherread = open("cipher.txt", "r")
+cipherline = cipherread.readline()
 
 def caeserencode(word,shift):
     newlist = []
     finalword = []
+    for x in open("original.txt", "r"):
+        print(x)
+        if len(x) > 0:
+            for letter in x:
+                newnum = ord(letter)
+                shiftednum = newnum + shift
+                while shiftednum > 122:
+                    shiftednum -= 26
+                newlist.append(shiftednum)
+            newlist.remove([len(newlist) - 1])
+            print(newlist)
+            for i in newlist:
+                newchar = chr(i)
+                finalword.append(newchar)
+                # print(''.join(finalword))
+        else:
+            break
+
+
     for letter in word:
         print(ord(letter))
         newnum = ord(letter)
@@ -15,44 +38,17 @@ def caeserencode(word,shift):
         finalword.append(newchar)
     print(''.join(finalword))
 
-gaybama = input("What word would you like to encrypt: ")
-cycles = int(input("How many cycles: "))
-caeserencode(gaybama,cycles)
-
-
-
--- 
-
-filetoencode = open("original.txt") #opens original string  #creates file
-cipherfile = open("cipher.txt", "w")
-cipherread = open("cipher.txt", "r")
-cipherline = cipherread.readline()
-
-def encode():
-    counter = 0
-    while counter < len(cipherline):
-        filetoencode.read()
-        cipherencode = caeserencode()
-        cipherencode()
-        #textstring?
-        cipherfile.write(cipherline)
-        counter += 1
-        #add cipher line for later!
 
 def decode():
     cipherread.read()
     print(cipherline)
 
 def menu():
-    while True:
-        choice = input("1 For encoding and 2 for decoding")
-        if choice == 1:
-            encode()
-        else:
-            decode()
-        break
-
-
-
+    choice = int(input("1 For encoding and 2 for decoding"))
+    if choice == 1:
+        numbertopush = int(input("Number of shifts?"))
+        caeserencode(encodeline, numbertopush)
+    else:
+        decode()
 
 menu()
