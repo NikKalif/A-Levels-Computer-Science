@@ -23,6 +23,13 @@ cipherline = cipherread.readline()
 #         print(cipher)
 #         return cipher
 
+filetoencode = open("original.txt", "r") #opens original string  #creates fi
+encodeline = filetoencode.readline()
+cipherfile = open("cipher.txt", "w")
+cipherread = open("cipher.txt", "r")
+cipherline = cipherread.readline()
+
+
 def encode(shift):
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
               'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
@@ -46,8 +53,28 @@ def encode(shift):
             print("Encrypted word:", cipher)
             print("Original Word:", x)
             cipheredlist.append(cipher)
-            print("List of Ciphered:", cipheredlist)
             cipher = ""
+    print("List of Ciphered:", cipheredlist)
+    for i in cipheredlist:
+        cipherfile.write(i)
+        cipherfile.write("\n")
+
+def decode():
+    cipherread.read()
+    print(cipherline)
+
+def menu():
+    choice = int(input("1 For encoding and 2 for decoding"))
+    if choice == 1:
+        numbertopush = int(input("Number of shifts?"))
+        while numbertopush > 10:
+            print("Please input a number between 1-10")
+            numbertopush = int(input("Number of shifts?"))
+        encode(numbertopush)
+    else:
+        decode()
+
+menu()
 
 
     # for x in filetoencode:
