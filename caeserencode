@@ -4,39 +4,121 @@ cipherfile = open("cipher.txt", "w")
 cipherread = open("cipher.txt", "r")
 cipherline = cipherread.readline()
 
-def caeserencode(word,shift):
-    newlist = []
-    finalword = []
-    for x in open("original.txt", "r"):
-        print(x)
+
+# def encode(plaintext,shift):
+#     letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+#               'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+#               'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+#     cipher = ""
+#     encodelower = plaintext.lower()
+#     for x in encodelower:
+#         for lettersintext in x:
+#             if lettersintext == " ":
+#                 cipher += " "
+#             else:
+#                 for i in range(len(letter)):
+#                     if letter[i] == lettersintext:
+#                         cipher += letter[i+shift]
+#                         break
+#         print(cipher)
+#         return cipher
+
+def encode(shift):
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+              'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+              'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    cipher = ""
+    ciphercount = 0
+    cipheredlist = []
+    for x in open("original.txt","r"):
         if len(x) > 0:
+            print("word:", x)
             for letter in x:
-                newnum = ord(letter)
-                shiftednum = newnum + shift
-                while shiftednum > 122:
-                    shiftednum -= 26
-                newlist.append(shiftednum)
-            newlist.remove([len(newlist) - 1])
-            print(newlist)
-            for i in newlist:
-                newchar = chr(i)
-                finalword.append(newchar)
-                # print(''.join(finalword))
-        else:
-            break
+                for i in range(len(letters)):
+                    if letter != letters[i]:
+                        ciphercount += 1
+                    else:
+                        cipher += letters[i + shift]
+                        print(cipher)
+                        ciphercount = 0
+                        break
+            print("Complete!")
+            print("Encrypted word:", cipher)
+            print("Original Word:", x)
+            cipheredlist.append(cipher)
+            print("List of Ciphered:", cipheredlist)
+            cipher = ""
 
 
-    for letter in word:
-        print(ord(letter))
-        newnum = ord(letter)
-        shiftednum = newnum + shift
-        while shiftednum > 122:
-            shiftednum -= 26
-        newlist.append(shiftednum)
-    for letter in newlist:
-        newchar = chr(letter)
-        finalword.append(newchar)
-    print(''.join(finalword))
+    # for x in filetoencode:
+    #     if len(x) > 0:
+    #         print("word:", x)
+    #         for letter in x:
+    #             if letter == " ":
+    #                 cipher += " "
+    #             else:
+    #                 for i in range(len(letters)):
+    #                     print(letter)
+    #                     if letter != letters[i]:
+    #                         ciphercount += 1
+    #                         print("Cipher Count:", ciphercount)
+    #                     cipher += letters[ciphercount]
+    #
+    # print(cipher)
+    # return cipher
+
+# def caeserencode(word,shift):
+#     newlist = []
+#     finalword = []
+#     listcounter = 0
+#     for x in open("original.txt", "r"):
+#         if len(x) > 0:
+#             print("word:", x)
+#             lengthofword = len(x) - 1
+#             print(lengthofword)
+#             for letter in x:
+#                 if x[lengthofword] == 10:
+#                     newnum = ord(letter)
+#                     print(newnum)
+#                     shiftednum = newnum + shift
+#                     while shiftednum > 122:
+#                         shiftednum -= 26
+#                     newlist.append(shiftednum)
+#                     listcounter += 1
+#                     for i in newlist:
+#                         newchar = chr(i)
+#                         finalword.append(newchar)
+#                 elif x[lengthofword] != 10:
+#                     print("elif executed")
+#                     newnum = ord(letter)
+#                     shiftednum = newnum + shift
+#                     while shiftednum > 122:
+#                         shiftednum -= 26
+#                     newlist.append(shiftednum)
+#                     listcounter += 1
+#                     for i in newlist:
+#                         newchar = chr(i)
+#                         finalword.append(newchar)
+#                         # print("listcounter:", listcounter - 1)
+#                         # del newlist[int(listcounter) - 1]
+#                         # print("newlist: ", newlist)
+#             print("final word:", ''.join(finalword))
+#             newlist = []
+#             listcounter = 0
+#             finalword = []
+#         else:
+#             break
+#     for letter in word:
+#         print(ord(letter))
+#         newnum = ord(letter)
+#         shiftednum = newnum + shift
+#         while shiftednum > 122:
+#             shiftednum -= 26
+#         newlist.append(shiftednum)
+#     for letter in newlist:
+#         newchar = chr(letter)
+#         finalword.append(newchar)
+#     print(''.join(finalword))
 
 
 def decode():
@@ -47,7 +129,7 @@ def menu():
     choice = int(input("1 For encoding and 2 for decoding"))
     if choice == 1:
         numbertopush = int(input("Number of shifts?"))
-        caeserencode(encodeline, numbertopush)
+        encode(numbertopush)
     else:
         decode()
 
