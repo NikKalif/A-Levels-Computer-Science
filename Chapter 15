@@ -1,0 +1,64 @@
+1. 
+
+import math
+
+class Point:
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+
+p = Point()
+q = Point()
+
+def distance(point1, point2):
+    result = math.sqrt((point2.x-point1.x)**2 + (point2.y-point1.y)**2)
+    print(result)
+
+distance(p,q)
+
+2. 
+
+class Point:
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+
+p = Point()
+q = Point()
+
+p.x = 3
+p.y = 10
+
+def reflect_x(point):
+    point.y -= 2*point.y
+
+    print(point.x)
+    print(point.y)
+
+reflect_x(p)
+
+3.
+
+class Point:
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+
+p = Point()
+q = Point()
+
+p.x = -3
+p.y = -100
+
+def slope_from_origin(point):
+    if point.y < 0:
+        point.y -= 2*point.y
+    if point.x < 0:
+        point.x -= 2*point.x
+    gradient = point.y / point.x
+    print(gradient)
+
+slope_from_origin(p)
+
+4.
+
