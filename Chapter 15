@@ -39,26 +39,31 @@ reflect_x(p)
 
 3.
 
-class Point:
+class Point: #Blue Print / architectural plan / template
     def __init__(self):
         self.x = 0
         self.y = 0
 
+    def slope_from_origin(self):
+        if self.y < 0:
+            self.y -= 2*self.y
+        if self.x < 0:
+            self.x -= 2*self.x
+        gradient = self.y / self.x
+        print(gradient)
+
+
+
 p = Point()
 q = Point()
 
-p.x = -3
+p.x = -3 #Actual individual house
 p.y = -100
 
-def slope_from_origin(point):
-    if point.y < 0:
-        point.y -= 2*point.y
-    if point.x < 0:
-        point.x -= 2*point.x
-    gradient = point.y / point.x
-    print(gradient)
+p.slope_from_origin()
 
-slope_from_origin(p)
+
+
 
 4.
 
