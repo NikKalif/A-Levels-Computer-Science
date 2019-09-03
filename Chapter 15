@@ -64,3 +64,26 @@ p.slope_from_origin()
 
 4.
 
+class Point: #Blue Print / architectural plan / template
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def get_line_to(self,newpoint):
+        x1 = self.x
+        x2 = newpoint.x
+        y1 = self.y
+        y2 = newpoint.y
+        if self.x - newpoint.x == 0:
+            m = "Infinite"
+            return m
+        else:
+            ytemp = newpoint.y - self.y
+            m = ytemp / (newpoint.x - self.x)
+            c = self.y - m*self.x
+            return (m,c)
+
+point1 = Point(4,11)
+point2 = Point(6, 15)
+
+print(point1.get_line_to(point2))
