@@ -118,12 +118,12 @@ class SMS_store: #Blue Print / architectural plan / template
             count += 1
             print(i)
 
-my_inbox = SMS_store()
 
+my_inbox = SMS_store()
 
 from_number = 60123261533
 time_arrived = 1200
-text_of_SMS = "fuck"
+text_of_SMS = "asdasdasd"
 
 my_inbox.add_new_arrival(from_number, time_arrived, text_of_SMS)
 my_inbox.message_count()
