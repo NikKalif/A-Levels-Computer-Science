@@ -87,3 +87,45 @@ point1 = Point(4,11)
 point2 = Point(6, 15)
 
 print(point1.get_line_to(point2))
+
+5.
+
+class SMS_store: #Blue Print / architectural plan / template
+    def __init__(self):
+        self.has_been_viewed = 0
+        self.from_number = 0
+        self.time_arrived = 0
+        self.text_of_SMS = 0
+        self.mylist = []
+
+    def add_new_arrival(self, from_number, time_arrived, text_of_SMS):
+        self.number = from_number
+        self.time = time_arrived
+        self.text = text_of_SMS
+        has_been_viewed = False
+        self.mylist.append([[has_been_viewed],[self.number],[self.time],[self.text]])
+        print(self.mylist)
+
+    def get_unread_indexes(self):
+        if self.mylist[0] == False:
+            print(self.mylist[3])
+        else:
+            print("No unread messages")
+
+    def message_count(self):
+        count = 0
+        for i in self.mylist:
+            count += 1
+            print(i)
+
+my_inbox = SMS_store()
+
+
+from_number = 60123261533
+time_arrived = 1200
+text_of_SMS = "fuck"
+
+my_inbox.add_new_arrival(from_number, time_arrived, text_of_SMS)
+my_inbox.message_count()
+my_inbox.get_unread_indexes()
+my_inbox.get_message(i)
