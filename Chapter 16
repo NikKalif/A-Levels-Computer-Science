@@ -1,0 +1,18 @@
+class Rectangle:
+    def __init__(self, posn, w, h):
+        self.corner = posn
+        self.width = w
+        self.height = h
+
+    def __str__(self):
+        return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
+
+    def area(self):
+
+
+class Point: #Blue Print / architectural plan / template
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+r = Rectangle(Point(0,0),10,5)
