@@ -1,0 +1,34 @@
+Q5 / Q6
+
+def recursive_min(array):
+    smallest = None
+    first_time = True
+    for i in array:
+        if type(i) == type([]):
+            val = recursive_min(i)
+        else:
+            val = i
+
+        if first_time or val < smallest:
+            smallest = val
+            first_time = False
+    return smallest
+
+list = [[2,9],[1,-3,13],[4,24]]
+
+def count(array, target):
+    number = 0
+    for i in array:
+        for x in i:
+            print(x)
+            if type(x) == type([]):
+                if x == target:
+                    print(x)
+                    number += 1
+                else: number += 0
+            else:
+                print("nop")
+
+    return number
+
+print(count(list, 2))
