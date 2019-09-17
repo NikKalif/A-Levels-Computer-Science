@@ -49,3 +49,16 @@ print(flatten(list))
 
 Q8
 
+def fibnew(n):
+    slot1 = 0
+    slot2 = 1
+    for i in range(n):
+        slot1 += slot2
+        print(slot1)
+        slot2 += slot1
+        print(slot2)
+
+fibnew(3)
+
+Q9
+
