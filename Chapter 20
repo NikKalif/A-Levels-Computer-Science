@@ -11,3 +11,27 @@ d) Error
 e) --
 f)['apples', 'bananas', 'grapes']
 g) False
+
+3)
+
+def add_fruit(inventory, fruit, quantity=0):
+    inventory = {fruit: quantity}
+    if "strawberries" in inventory:
+        print("Yes")
+    else:
+        print("no")
+        
+4)
+
+wordsfile = open("alice_words.txt", "w+")
+alicefile = open("alice.txt", "r")
+
+alicewords = []
+aliceline = alicefile.readline()
+while aliceline != 0:
+    for word in aliceline.split():
+        alicewords.append(word)
+
+alicewords.sort()
+print(alicewords)
+
