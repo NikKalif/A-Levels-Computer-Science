@@ -1,0 +1,27 @@
+class MyTime:
+    def __init__(self, hrs=0, mins=0, secs=0):
+        totalsecs = hrs*3600 + mins*60 + secs
+        self.hours = totalsecs // 3600        # Split in h, m, s
+        leftoversecs = totalsecs % 3600
+        self.minutes = leftoversecs // 60
+        self.seconds = leftoversecs % 60
+
+    def add_time(t1, t2):
+        h = t1.hours + t2.hours
+        m = t1.minutes + t2.minutes
+        s = t1.seconds + t2.seconds
+        sum_t = h, m, s
+        return sum_t
+
+    def between(t1, t2, t3):
+        if t1 <= t3:
+            if t3 < t2:
+                return True
+            else:
+                return False
+
+time1 = MyTime(0,19,15)
+time2 = MyTime(0,10,5)
+time3 = MyTime(0,18,0)
+donetime = MyTime.add_time(time1, time2)
+print(MyTime.between(time1,time2,time3))
