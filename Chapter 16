@@ -1,5 +1,21 @@
+1) class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x = x
+        self.y = y
+
+    def distance_from_origin(self):
+        """ Compute my distance from the origin """
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def __str__(self):    # All we have done is renamed the method
+            return "({0}, {1})".format(self.x, self.y)
+
 class Rectangle:
     def __init__(self, posn, w, h):
+        """ Initialize rectangle at posn, with width w, height h """
         self.corner = posn
         self.width = w
         self.height = h
@@ -7,12 +23,23 @@ class Rectangle:
     def __str__(self):
         return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
 
+    def grow(self, delta_width, delta_height):
+        """ Grow (or shrink) this object by the deltas """
+        self.width += delta_width
+        self.height += delta_height
+
+    def move(self, dx, dy):
+        """ Move this object by the deltas """
+        self.corner.x += dx
+        self.corner.y += dy
+
     def area(self):
+        totalarea = self.width*self.height
+        return totalarea
 
+r = Rectangle(Point(0, 0), 10, 5)
+totala = Rectangle.area(r)
+print(totala)
 
-class Point: #Blue Print / architectural plan / template
-    def __init__(self,x,y):
-        self.x = x
-        self.y = y
+2)
 
-r = Rectangle(Point(0,0),10,5)
