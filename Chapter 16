@@ -43,3 +43,6 @@ print(totala)
 
 2)
 
+def perimeter(self):
+        totalperimeter = 2*self.width + 2*self.height
+        return totalperimeter
