@@ -1,25 +1,3 @@
-class Stack:
-    def __init__(self):
-        self.items = []
-
-    def push(self, item):
-        self.items.append(item)
-
-    def pop(self):
-        return self.items.pop()
-
-    def is_empty(self):
-        return (self.items == [])
-
-s = Stack()
-
-s.push(45)
-s.push(22)
-s.push(69)
-
-while not s.is_empty():
-    print(s.pop(), end=" ")
-
 def eval_postfix(expr):
     import re
     token_list = re.split("([^0-9])", expr)
@@ -37,5 +15,18 @@ def eval_postfix(expr):
             stack.push(int(token))
     return stack.pop()
 
-print(eval_postfix("1 2 + 3 *"))
+class Stack:
+    def __init__(self):
+        self.items = []
 
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def is_empty(self):
+        return (self.items == [])
+
+print(eval_postfix("1 2 + 3 *"))
+print(eval_postfix("3 3 *"))
